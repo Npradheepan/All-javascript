@@ -1,0 +1,2 @@
+# All-javascript
+basic functions
