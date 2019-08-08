@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise</title>
+</head>
+    <script>
+        function myFunc(x){
+           var color= document.getElementById("myImage");
+           if (x==0){
+             color.style.backgroundColor="yellowgreen";
+           }else{
+               color.style.backgroundColor="Red";
+           }
+        }
+       
+    </script>
+<style>
+    #myImage{
+        width:100px; 
+        height: 100px;
+        border-radius: 50px;
+        border: 1px solide red;
+        background-color: yellowgreen;
+    }
+</style>
+<body>
+        <h1>How to javascript function!</h1>
+        <div id="myImage" ></div>
+   
+
+        <button onclick="myFunc(0)">click-on</button>
+        <button onclick="myFunc(1)">click-off</button>
+</body>
+</html>
