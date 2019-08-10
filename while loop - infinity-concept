@@ -1,0 +1,10 @@
+package javaapplication12;
+
+public class JavaApplication12 {
+public static void main(String[] args) {
+       while(true){  
+        System.out.println("infinitive while loop"); 
+    }
+       
+    }  
+}
