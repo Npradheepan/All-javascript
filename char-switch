@@ -1,0 +1,37 @@
+
+package javaapplication9;
+public class JavaApplication9 {
+    
+
+public static void main(String[] args) { 
+    char branch='E';
+    int collegeyear = 3;
+     
+    switch(collegeyear){
+        case 1: System.out.println("English,Maths,Sceince");
+        break;
+        case 2:switch(branch){
+            case 'C':System.out.println("Operating Systerm,Date,Structure");
+            break;
+             case 'E':System.out.println("Operating Systerm,Date,Structure");
+            break;
+             case 'D':System.out.println("Operating Systerm,Date,Structure");
+            break;
+        }
+        break;
+        case 3:
+            switch(branch){
+                 case 'E':System.out.println("Operating Systerm,Date,Structure");
+            break;
+            }
+            break;
+        case 4:
+            switch(branch){
+                 case 'P':System.out.println("Operating Systerm,Date,Structure");
+            break;
+            }
+            break;
+            
+    }
+}
+}
