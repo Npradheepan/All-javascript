@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Arrays</h2>
+
+<p>Click the button to loop through an array:</p>
+
+<button onclick="myFunc()">Click</button>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+  let fruits = ["Apple", "Mango", "Banana", "Orange"];
+  let result = document.getElementById("result");
+
+  fruits.forEach(function(element) {
+      result.innerHTML += element + "<br>";
+  }); 
+}
+</script>
+
+</body>
+</html>

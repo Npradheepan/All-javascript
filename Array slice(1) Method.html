@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array slice() Method</h1>
+
+<p>Click the button to extract elements from index 1:</p>
+
+<button onclick="myFunc()">Extract</button>
+
+<p id="result"></p>
+
+<script>
+var fruits = ['Banana', 'Mango', 'Apple', 'Orange'];
+
+function myFunc() {
+   var extract = fruits.slice(2);
+   document.getElementById('result').innerHTML = extract;
+}
+</script>
+
+</body>
+</html>

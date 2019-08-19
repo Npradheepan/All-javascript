@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array reverse() method</h1>
+
+<p>Click the button to reverse the array:</p>
+
+<button onclick="myFunc()">Reverse</button>
+
+<p id="result"></p>
+
+<script>
+var nums = [10, 20, 30, 40, 50];
+document.getElementById("result").innerHTML = nums;
+
+function myFunc() {
+   document.getElementById("result").innerHTML = nums.reverse();
+}
+</script>
+
+</body>
+</html>

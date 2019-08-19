@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array sort() Method</h1>
+
+<p>Click the button to sort the array:</p>
+
+<button onclick="myFunc()">Sort</button>
+
+<p id="result"></p>
+
+<script>
+var months = ['March', 'Jan', 'Feb', 'Dec'];
+document.getElementById('result').innerHTML = months;
+
+function myFunc() {
+   document.getElementById('result').innerHTML = months.sort();
+}
+</script>
+
+</body>
+</html>

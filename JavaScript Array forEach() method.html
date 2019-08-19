@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array forEach() method</h1>
+
+<p id="result"></p>
+
+<p>Note that the function takes 3 arguments:</p>
+<ul>
+    <li>The element value (required)</li>
+    <li>The element index (optional)</li>
+    <li>The array itself (optional)</li>
+</ul>
+
+<script>
+var fruits = ["Apple", "Mango", "Banana", "Orange"];
+var result = document.getElementById("result");
+
+fruits.forEach(function(element, index, array) {
+    result.innerHTML += index + ": " + element + "<br>";
+});
+</script>
+
+</body>
+</html>

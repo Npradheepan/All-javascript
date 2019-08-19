@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button below to change the background color of the document:</p>
+
+<button onclick="bgChange()">Click me</button>
+
+<script>
+function bgChange() {
+  let color = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  document.body.style.backgroundColor = color;
+}
+
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+</script>
+
+</body>
+</html>

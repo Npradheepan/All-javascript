@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>email-validate</title>
+</head>
+<script>
+function validateemail(){  
+    var x=document.myform.email.value;  
+    var atposition=x.indexOf("@");  
+    var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+    alert("Please enter a valid e-mail address ");  
+    return false;  
+  }  
+else if(isNAN(email)){ 
+          alert("please Enter the Valueable Email")
+      
+  }
+} 
+
+</script>
+<body>
+        <form name="myform"  method="post"  onsubmit=" validateemail();">  
+            Email: <input type="text" name="email" id="email"><br/>  
+            <input type="submit" value="register">  
+        </form>  
+</body>
+</html>

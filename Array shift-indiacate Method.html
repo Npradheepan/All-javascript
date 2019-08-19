@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array shift() Method</h1>
+
+<p>Click the button to remove first element from the array:</p>
+
+<button onclick="myFunc()">Shift</button>
+
+<p id="result"></p>
+
+<script>
+var fruits = ["Banana", "Mango", "Apple", "Orange"];
+document.getElementById("result").innerHTML = fruits;
+
+function myFunc() {
+   var x = fruits.shift();
+   document.getElementById("result").innerHTML = fruits + 
+   "<br>Removed element: " + x;
+}
+</script>
+
+</body>
+</html>

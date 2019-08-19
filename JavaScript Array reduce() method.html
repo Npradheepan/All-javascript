@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array reduce() method</h1>
+
+<p>Click the button to get the total of the numbers in the array:</p>
+
+<button onclick="myFunc()">Click</button>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+   var nums = [10, 20, 30, 40, 50];
+   var sum = nums.reduce(getTotal);
+   document.getElementById("result").innerHTML = sum;
+}
+
+function getTotal(x, y) {
+   return (x + y);
+}
+</script>
+
+</body>
+</html>

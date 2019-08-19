@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+#demo {
+  font-size: 6em;
+  background: #4285f4;
+  color: white;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<h2>JavaScript can Hide and Show HTML Elements</h2>
+
+<div id="demo">Hello pradheepan welcome </div>
+
+<button type="button" onclick="hide()">Hide</button>
+<button type="button" onclick="show()">Show</button>
+
+<script>
+function hide() {
+  document.getElementById("demo").style.display = "none";
+}
+
+function show() {
+  document.getElementById("demo").style.display = "block";
+}
+</script>
+
+</body>
+</html> 

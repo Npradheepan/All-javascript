@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array map() method</h1>
+
+<p>Click the button to get the twice value of each element in the array:</p>
+
+<button onclick="myFunc()">Show</button>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+  var nums1 = [1, 5, 20, 14, 55, 16];
+  var nums2 = nums1.map(twice);
+  document.getElementById("result").innerHTML = nums2;
+}
+
+function twice(element, index, array) {
+   return (element * 2);
+}
+</script>
+
+</body>
+</html>

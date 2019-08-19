@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+function disp()
+{
+    alert("The key is pressed");
+}
+function disp1()
+{
+    alert("the key is up");
+}
+function disp2()
+{
+    alert("the key is down");
+}
+</script>
+<body>
+    Enter the first text <input type="text" onkeypress="disp()"><br>
+    Enter the second text <input type="text" onkeyup="disp1()"><br>
+    Enter the third text <input type="text"onkeydown="disp2()"><br>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array push() Method</h1>
+
+<p>Click the button to add three elements to the array:</p>
+
+<button onclick="myFunc()">Add</button>
+
+<p id="result"></p>
+
+<script>
+var fruits = ["Banana", "Mango", "Apple"];
+document.getElementById("result").innerHTML = fruits;
+
+function myFunc() {
+   var total = fruits.push("Strawberry", "Lychee", "Guava");
+   document.getElementById("result").innerHTML = fruits + "<br> Lenght = " + total;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function emp(id, name, salary){
+        this.id=id;
+        this.name=name;
+        this.salary=salary;
+
+        this.changeSalary= changeSalary;
+        function changeSalary(otherSalar){
+            this.salary=otherSalar;
+        }
+    }
+    e=new emp(10,"Sonoo jailwal",30000);
+    document.write(e.id+"" e.name+""+e.salary4)
+</script>
+<body>
+    
+</body>
+</html>

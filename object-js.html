@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function quality()
+    {
+        alert("Good");
+    }
+</script>
+<body>
+<script type="text /javascript">
+
+    var html5=new object();
+    html5.author="Raj";
+    html5.edition=3;
+    html5.rating=quality;
+
+    var css3=new object();
+    css3.author="Sam";
+    css3.edition=2;
+    
+    css3.rating= function quality()
+    {
+        alert("Average");
+    }
+    document.write("Author"+" "+html5.author+" "+<br/>);
+    document.write("Edition"+" "+html5.edition+"<br/>");
+
+    document.write("Author"+" "+css3.author+"<bt/>"),
+    document.write("Edition"+" "+css3.edition +"<br/>");
+    css3.rating();
+
+</script>
+</body>
+    
+</body>
+</html>

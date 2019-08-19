@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#result {
+   display: flex;
+   justify-content: center;
+   color: #ec181e;
+   font-size: 15vw;
+   font-weight: 400;
+   text-shadow: 0 6px 4px rgba(255, 100, 100, 0.6);
+}
+</style>
+</head>
+<body>
+
+<div id="result">00:00:00</div>
+
+<script>
+// execute startTimer() once every 1 second
+var intervalID = setInterval(startTimer, 1000);
+
+function startTimer() {
+   var date = new Date();
+   var x = document.getElementById("result");
+   x.innerHTML = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example uses the addEventListener() method to attach two click events to a button:</p>
+
+<button>Click me</button>
+
+<script>
+document.querySelector("button").addEventListener("click", myFunc);
+document.querySelector("button").addEventListener("click", anotherFunc);
+
+function myFunc() {
+    document.body.style.backgroundColor = "coral";
+}
+
+function anotherFunc() {
+    document.body.style.fontSize = "2rem";
+}
+</script>
+
+</body>
+</html>

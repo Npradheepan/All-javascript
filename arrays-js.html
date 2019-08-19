@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function callme(str)
+    {
+        alert(str+ " "  +"friends");
+        var x=document.F1.T1.value;
+        var y=document.F1.T2.value;
+        alert(Number(x)+Number(y));
+    }
+    function showme(t)
+    {
+        alert("I Am show"+" "+t);
+    }
+</script>
+<body>
+    <form action="" name="F1">
+        Enter the first number<input type="text" name="T1"/><br>
+        enter thr second number<input type="text" name="T2"><br>
+        <input type="button" value="click" onclick="callme('wel come')"/><br>
+        <a href="javascript:showme('Theepan')"><h3>click Me</h3></a>
+        
+    </form>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array filter() method</h1>
+
+<p>The following example show all elements in the array are equal or larger than 18:</p>
+
+<p id="result"></p>
+
+<script>
+var age = [1, 30, 39, 29, 10, 13];
+var val = age.filter(isAdult);
+document.getElementById("result").innerHTML = val;
+
+function isAdult(element, index, array) {
+    return element >= 18;
+}
+</script>
+
+</body>
+</html>

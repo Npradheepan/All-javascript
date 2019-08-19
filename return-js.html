@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function callme()
+    {
+        alert("welcome");
+        var a=document.F1.T1.value;
+        var b=document.F1.T2.value;
+        var c=add(a,b);// for return
+        alert(c);
+        mycall(10);//for Recursion
+    }
+    function add(a,b)
+    {
+        return Number(a)+Number(b);
+    }
+    function showme()
+    {
+        alert("I m show")
+    }
+</script>
+<body>
+    <form action="" name="F1">
+        Enter the first number<input type="text" name="T1"/><br>
+        enter thr second number<input type="text" name="T2"><br>
+        <input type="button" value="click" onclick="callme()"/><br>
+        <a href="javascript:showme('Theepan')"><h3>click Me</h3></a>
+        
+    </form>
+</body>
+</html>

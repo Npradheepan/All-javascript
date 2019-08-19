@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function callme()
+    {
+        document.getElementById("D1").style.backgroundColor="blue";
+    }
+    function callme1()
+    {
+        varb= document.getElementsByClassName("C1");
+        b[0].style.Color="green";
+        b[0].style.fontSize="20px";
+        b[1].style.fontweight ="Bold";
+
+    }
+    function callme2()
+    {
+        var b1= document.getElementsByTagName("H1");
+        b1[0].style.backgroundColor="red";
+        b1[1].style.backgroundColor="green";
+    }
+
+</script>
+<body>
+    <div id="D1" style="background-color: orange;height:100px;width:100px;margin-left:500px;margin-top:500px;"> </div>
+    
+    <div class="C1"style="background-color:yellow; height:100px;width:100px;">Good</div>
+    <div class="C1"style="background-color: red; height:100px;width:100px;">Morning</div>
+     
+    <input type="button" value="click me" onclick="callme"/>
+</body>
+</html>

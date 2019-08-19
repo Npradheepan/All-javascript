@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to get the first child element of a DIV element:</p>
+
+<button onclick="myFunc()">Click</button>
+
+<div id="box" style="background: lightgreen;">
+   <p>This is first P inside DIV</p>
+   <p>This is second P inside DIV</p>
+   <p>This is third P inside DIV</p>
+</div>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+   var x = document.getElementById("box").firstElementChild.textContent;
+   document.getElementById("result").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

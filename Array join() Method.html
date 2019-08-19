@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array join() Method</h1>
+
+<p>The following example creates an array with three elements, then joins the array five times:</p>
+
+<p id="result"></p>
+
+<script>
+var fruits = ["Banana", "Apple", "Mango"];
+var result = document.getElementById("result");
+
+result.innerHTML = fruits.join("") + "<br>";
+result.innerHTML += fruits.join(" ") + "<br>";
+result.innerHTML += fruits.join(" + ") + "<br>";
+result.innerHTML += fruits.join(" / ") + "<br>";
+result.innerHTML += fruits.join(" &copy; ");
+</script>
+
+</body>
+</html>

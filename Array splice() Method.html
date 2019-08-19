@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array splice() Method</h1>
+
+<p>Click the button to add 'Feb' at index 1</p>
+<button onclick="myFunc()">Splice</button>
+
+<p id="x"></p>
+
+<script>
+var months = ['Jan', 'Mar', 'Apr', 'Jun'];
+document.getElementById('x').innerHTML = months;
+
+function myFunc() {
+   months.splice(1, 0, 'Feb');
+   document.getElementById('x').innerHTML = months;
+}
+</script>
+
+</body>
+</html>

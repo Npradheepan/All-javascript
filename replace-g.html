@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript replace() Method</h1>
+
+<p>Click the button to replace all "to be" with "ZZZ":</p>
+
+<button onclick="myFunc()">Click</button>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+   var str1 = 'The question is to be, or not to be, that is to be.';
+   var str2 = str1.replace(/to be/g, 'ZZZ');
+   document.getElementById('result').innerHTML = str2;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Array find() method</h1>
+
+<p>The following example shows the first element in the array that is equal or bigger than 18:</p>
+
+<p id="result"></p>
+
+<script>
+var num = [1, 30, 39, 29, 10, 13];
+var val = num.find(myFunc);
+document.getElementById("result").innerHTML = val;
+
+function myFunc(element) {
+    return element >= 18;
+}
+</script>
+
+</body>
+</html>

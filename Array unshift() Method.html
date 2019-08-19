@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Array unshift() Method</h1>
+
+<p>Click the button to add "Strawberry" to the array:</p>
+
+<button onclick="myFunc()">Add</button>
+
+<p id="result"></p>
+
+<script>
+var fruits = ["Banana", "Mango", "Apple"];
+document.getElementById("result").innerHTML = fruits;
+
+function myFunc() {
+   fruits.unshift("Strawberry");
+   document.getElementById("result").innerHTML = fruits;
+}
+</script>
+
+</body>
+</html>

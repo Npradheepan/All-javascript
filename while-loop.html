@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Click the button to loop through an array:</p>
+
+<button onclick="myFunc()">Click</button>
+
+<p id="para"></p>
+
+<script>
+function myFunc() {
+   var fruits = ['Apple', 'Mango', 'Banana', 'Orange'];
+   var txt = '';
+   var i = 0;
+
+   while (i < fruits.length) {
+       txt += fruits[i] + '<br>';
+       i++;
+   }
+
+   document.getElementById('para').innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function loadme()
+    {
+        alert("page is loaded");
+    }
+    function unloadme()
+    {
+        alert("unloaded");
+    }
+    function clickme()
+    {
+        alert("the mouse is clicked");
+    }
+    function dbclickme()
+    {
+        alert("the mouse is double click");
+    }
+    function mouseoverme()
+    {
+        alert("the mouse is over the div");
+    }
+    function mousedownme()
+    {
+        alert("the mouse button is down");
+    }
+    function mouseupme()
+    {
+        alert(" the mouse button up");
+    }
+    function mouseoutme()
+    {
+        alert("the out of the div");
+    }
+    function resizeme()
+    {
+        alert("the window is resized");
+    }
+</script>
+<body onload="loadme()" onunload="onunload()" onresize="resizeme()">
+    <div style="background-color:red; height:200px; width:200px;" onclick="onclickme()"><h3>On click Event</h3></div>
+    <div style="background-color:rgb(28, 138, 56); height:200px; width:200px;" ondbclick="dbclickme()"><h3>On double click Event</h3></div>
+    <div style="background-color:rgb(34, 125, 209); height:200px; width:200px;" onmouseover="onmouseoverme()"><h3>On mouseover Event</h3></div>
+    <div style="background-color:rgb(130, 173, 28); height:200px; width:200px;" onmousedown="onmousedownme()"><h3>On mousedown Event</h3></div>
+    <div style="background-color:rgb(230, 208, 17); height:200px; width:200px;" onmouseup="mouseupme()"onmouseout="onmouseout()"><h3>On onmouse up Event</h3></div>
+
+</body>
+</html>

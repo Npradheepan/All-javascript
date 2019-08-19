@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>This example demonstrates how to pass parameter values when using the addEventListener() method:</p>
+
+<button>Click me</button>
+
+<p id="para"></p>
+
+<script>
+var btn = document.querySelector("button");
+var x = 10;
+var y = 5;
+
+btn.addEventListener("click", function() {
+    myFunc(x, y);
+});
+
+function myFunc(a, b) {
+   var ans = a * b;
+   document.getElementById("para").innerHTML = ans;
+}
+</script>
+
+</body>
+</html>

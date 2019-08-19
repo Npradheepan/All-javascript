@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the buttons to change the avatar:</p>
+
+<img id="demo" src="images/pic1.jpg" width="240" height="240">
+
+<div>
+  <button onclick="changeImage(0)">picture1</button>
+  <button onclick="changeImage(1)">picture2</button>
+</div>
+
+<script>
+function changeImage(x) {
+   var image = document.getElementById("demo");
+   if (x == 0) {
+       image.src = "images/pic1.jpg";
+   } else {
+       image.src = "images/pic2.jpg";
+   }
+}
+</script>
+
+</body>
+</html>

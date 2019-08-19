@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="D1" style="height: 200px; width:200px;background-color:brown"></div>
+    
+    <div id="D2" style="height: 200px; width:200px; background-color:burlywood;"></div>
+    <script>
+        //two type
+    document.getElementById("D1").onclick=callme;
+    function callme()
+    {
+        alert("Moouse Clicke");
+    }
+    document.getElementById("D2").onmouseover=function callover()
+    {
+        alert("Mouse over");
+    };
+
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+function emp(id, name, salary){
+    this.id=id;
+    this.name=name;
+    this.salary=salary;
+
+    this.changeSalary= changeSalary;
+    function changeSalary(otherSalar){
+        this.salary=otherSalar;
+    }
+}
+e=new emp(10,"")
