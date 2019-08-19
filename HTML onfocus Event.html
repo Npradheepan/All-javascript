@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML onfocus Event</h1>
+
+<input type="text" onfocus="func1(this)" onblur="func2(this)">
+
+<script>
+function func1(x) {
+    x.style.background = 'lightgreen';
+}
+
+function func2(x) {
+    x.style.background = 'coral';
+}
+</script>
+
+<p>The function func1() is triggered when the input field get focus:</p>
+<p>The function func2() is triggered when the input field loose focus:</p>
+
+</body>
+</html>

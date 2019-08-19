@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Event handler properties</h1>
+
+<p id="para">Click here to change this text</p>
+
+<script>
+let para = document.querySelector("#para");
+para.onclick = changeText;
+
+function changeText() {
+  para.innerHTML = "Hello world";
+}
+</script>
+
+</body>
+</html>

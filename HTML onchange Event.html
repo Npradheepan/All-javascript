@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>HTML onchange Event</h1>
+
+<p>Change the text in the input field, then click outside the field to invoke the onchange event:</p>
+
+<input type="text" onchange="myFunc(this)" value="Hello">
+
+<script>
+function myFunc(x) {
+    x.value = 'Hello world';
+}
+</script>
+
+</body>
+</html>
