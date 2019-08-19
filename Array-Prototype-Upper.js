@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array-Prototype-Upper</title>
+</head>
+<script>
+    Array.prototype.upper = function(){
+        for(var i= 0; i<this.length;i++){
+            this[i] = this [i].toUpperCase();
+        }
+    };
+    function clickme(){
+        var fruits =["Pradheepan","srilanka","Germany"];
+        fruits.upper();
+        document.getElementById("result").innerHTML=fruits;
+    }
+</script>
+<body>
+    <button onclick="clickme()">Click</button>
+    <p id="result"></p>
+</body>
+</html>
