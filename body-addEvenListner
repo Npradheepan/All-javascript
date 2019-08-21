@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>body-addEvenlistener</title>
+
+</head>
+<body>
+    <p>Click the button to remove the event handler:</p>
+    <button onclick="removeHandler()">Remove Event</button>
+    <p id="para"></p>
+</body>
+<script>
+    
+document.addEventListener("mousemove", myFunc);
+function myFunc() {
+   document.getElementById("para").innerHTML = Math.random();
+}
+function removeHandler() {
+   document.removeEventListener("mousemove", myFunc);
+}
+</script>
+</html>
