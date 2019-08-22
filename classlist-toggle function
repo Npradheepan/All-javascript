@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>classlist-toggle function</title>
+</head>
+<style>
+.para {
+    width: 50%;
+   background: rgb(241, 111, 120);
+   font-size: 3em;
+   padding: 12px 8px;
+   border-radius: 25px;
+   text-align: center;
+}
+
+.anotherClass {
+   width: 50%;
+   background: rgb(180, 173, 249);
+   font-size: 3em;
+   padding: 12px 8px;
+   border-radius: 25px;
+   text-align: center;
+}
+</style>
+<body>
+        <p>Click the button to toggle between two classes:</p>
+        <button onclick="myFunc()">Toggle</button>
+        <p id="x" class="para">This is a Paragraph</p>
+</body>
+<script>
+    function myFunc(){
+        var elem = document.getElementById("x");
+        elem.classList.toggle("anotherClass");
+    }
+</script>
+</html>
