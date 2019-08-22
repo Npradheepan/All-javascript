@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>childNodes-quarySelector</title>
+</head>
+<body>
+    <!-- This is a comment node -->
+    <p>Click the button get a collection of the BODY element's child nodes:</p>
+    <button onclick="clickmeFunc()">Click</button>
+    <p><b>Note:</b> Whitespace inside elements is considered as text, and text is considered as nodes. Comments are also considered as nodes.</p>
+    <p id="para"></p>
+
+</body>
+<script>
+function clickmeFunc(){
+    var list= document.body.childNodes;
+    var text =" ";
+    for (var i = 0; i<list.length; i++){
+        text += list[i].nodeName + "<br>";
+    }
+    document.getElementById("para").innerHTML=text;
+}
+</script>
+</html>
