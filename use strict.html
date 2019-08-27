@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>"use strict";</h1>
+
+<p>To access debugging in your browser press F12, and select "Console" in the debugger menu:</p>
+
+<script>
+document.write(myFunc());
+
+function myFunc() {
+  // Function-level strict mode syntax
+  "use strict";
+  str = "Hi I'm a strict mode function!";  // This will cause an error because str is not defined.
+  return str;
+}
+</script>
+
+</body>
+</html>

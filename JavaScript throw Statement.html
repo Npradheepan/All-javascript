@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript throw Statement</h1>
+
+<p>Please enter a number between 5 and 10:</p>
+
+<input type="text" onkeyup="myFunc()">
+
+<p id="para"></p>
+
+<script>
+var para = document.getElementById("para");
+
+function myFunc() {
+   para.innerHTML = "";
+   var x = document.querySelector("input").value;
+   try {
+      if(x == "")  throw "is Empty";
+      if(isNaN(x)) throw "Not a Number";
+      if(x > 10)   throw "too High";
+      if(x < 5)    throw "too Low";
+   }
+   catch(err) {
+      para.innerHTML = "Input " + err;
+   }
+}
+</script>
+
+</body>
+</html>
