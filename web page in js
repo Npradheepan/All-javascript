@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  
+  
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="coin-container">
+      <div class="coin-inside">
+        <div class="coin heads">
+          <img src="images/pic6.jpg" alt="">
+        </div>
+        <div class="coin tails">
+          <img src="images/pic4.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js'></script>
+  <script src='script.js'></script>
+</body>
+</html>
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333333;
+  background-image: url("http://www.ramonhitzeroth.com/Codepen/table-bg.jpg");
+}
+.wrapper .coin-container {
+  width: 150px;
+  height: 150px;
+  position: relative;
+}
+.wrapper .coin-container .coin-inside {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  border-radius: 100%;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+.wrapper .coin-container .coin-inside .coin {
+  position: absolute;
+  backface-visibility: hidden;
+}
+.wrapper .coin-container .coin-inside .coin.heads {
+  transform: rotateY(0deg);
+}
+.wrapper .coin-container .coin-inside .coin.tails {
+  transform: rotateY(180deg);
+}
+
+/*# sourceMappingURL=style.css.map */
+
+
+let flipping = false;
+
+$('.coin-inside').click(() => {
+  let val = Math.ceil((Math.random() * 100));
+  
+  if(!flipping) {
+    flipping = true;
+    let totalFlips = Math.ceil((Math.random() * 2));  
+    
+    TweenMax.to(
+      $('.coin-inside'),
+      2,
+      {
+        ease: SlowMo.ease.config(0.3, 0.9, false), 
+        rotationY: '+='+(180*(10+totalFlips)),
+        scale: 5,
+        onComplete: () => {        
+          TweenMax.to(
+            $('.coin-inside'),
+            2,
+            {
+              ease: Power2.easeOut, 
+              rotationY: '+='+(180*(10)),
+              scale: 1,
+              onComplete: function() {
+                flipping = false;
+              }
+            }         
+          )
+        }
+      }
+    );
+  }       
+});
