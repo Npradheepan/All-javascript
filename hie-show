@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavascriptExcersice</title>
+</head>
+<style>
+    *,
+html,
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: Times;
+}
+.heading {
+    width: 80%;
+    font-size: large;
+    padding: 10px;
+     margin: 20px auto;
+    text-align: center;
+    background: #75abee;
+}
+#demo {
+    margin: 20px auto;
+    width: 40%;
+    font-size: 22px;
+    color: rosybrown;
+    background: skyblue;
+    text-align: center;
+}
+
+button {  
+     width: 10%;
+     padding: 10px;
+     font-size: 12px;
+     align-items: center;
+}
+
+.cltr {
+    width: 30%;
+    margin-left: 10px;
+    margin: auto;
+    text-align: center;
+    
+}
+</style>
+<body>
+    <h1 class="heading Textcenter">JavascriptExcersice</h1>
+
+     <h1  id ="demo" class="hallo">Hallo Wold</h1>
+     <div class="cltr">  
+     <button type="button" onclick="hide()">hide</button>
+     <button type="button" onclick="show()">show</button>
+    </div>
+<script> 
+    function hide(){
+        document.getElementById("demo").style.display="none";
+    }
+    function show(){
+        document.getElementById("demo").style.display="block";
+    }
+</script>
+</body>
+</html>
