@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+
+    .my-form {
+        width: 80%;
+        margin: 40px auto;
+        background: #fefefe;
+        border:5px solid #eeeeee;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .wrapper {
+        padding: 4px 20px 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+     .footer {
+        padding: 20px;
+        background: #f1f1f1;
+        text-align: center;
+        
+     }
+    input[type="text"], input[type= password], input[type=email]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #cccccc;
+    }
+
+    button {
+        background:#4caf50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+
+
+</style>
+<body>
+    <form class="my-form" action ="/html/form-action.php" onsubmit="return validateform()" mathod="POST">
+        <div class="Wrapper">
+            <h2>Creat Acount</h2>
+            <label for="username"><b>Name</b></label>
+            <input type="text" placeholder="Enter User Name" name="uname" id="username" required>
+
+            <label for="useremail"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="uemail" id="useremail" required>
+            
+            <label for="userpwd-1"><b>Password</b></label>
+            <input type="password" placeholder="Enter the password" name="psw" id="userpwd_1" required>
+            <input type="password" placeholder="Connform password" name="cpsw" id="userpwd_2" required>
+            
+            <p style=" margin-top:10px;">
+                <input type="radio" name="gender" id="female" value="female" checked><label for="female">Female</label>
+                <input type="radio" name="gender" id="male" value="male" checked><label for="male">Male</label>
+            </p>
+            
+        
+        <div class="footer">
+            <div>Already have an account ? <a href="#">LOGIN</a></div>
+        </div>
+        <button type="aubmit">Sing Up</button>
+    </div>
+    </form>
+    <script>
+        function validateform(){
+            let name = document.getElementById("username").value;
+            let email = document.getElementById("useremail").value;
+            let userpwd_1 = document.getElementById("userpwd_1").value;
+            let userpwd_2 = document.getElementById("userpwd_2").value;
+            if(name == ""){
+                alert("Name must be filled out");
+                return false;
+            }
+            if(email == ""){
+                alert("Email must be filled out");
+                return false;
+            }
+            if(userpwd_1 !== "" || userpwd_2 !=="" ){
+                alert("Password didn't match");
+                return false;
+            }else{
+                alert("password must be filled out");
+                return false;
+            }
+            return true
+
+        }
+    </script>
+</body>
+</html>
