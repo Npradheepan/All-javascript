@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button below to change the background color of the document:</p>
+
+<button>Click me</button>
+
+<script>
+let btn = document.querySelector("button");
+btn.addEventListener("click", bgChange);
+
+function bgChange() {
+  let color = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  document.body.style.backgroundColor = color;
+}
+
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+</script>
+
+</body>
+</html>
+
+.............................................................................................................................
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button below to change the background color of the document:</p>
+
+<button>Click me</button>
+
+<script>
+let btn = document.querySelector("button");
+btn.onclick = bgChange;
+
+function bgChange() {
+  let color = "rgb(" + random(255) + "," + random(255) + "," + random(255) + ")";
+  document.body.style.backgroundColor = color;
+}
+
+function random(number) {
+  return Math.floor(Math.random()*(number+1));
+}
+</script>
+
+</body>
+</html>
