@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Exersice</title>
+</head>
+<body>
+    <form>   
+        Enter your Name:<input type="text" id="letters">
+        <input type="button" onclick="validateName(document.getElementById('letters'),'only letters Allowed')" value='validateName'/>
+    </form>
+</body>
+<script type="text/javascript">
+function validateName(elem, helperMsg){
+    var alphaExp = /^[a-zA-Z]+$/;
+    if (elem.value.match(alphaExp)){
+        alert ("Entered Name Is OK");
+        return true;
+    }else{
+        alert(helperMsg);
+        elem.focus();
+        return
+    }
+}
+
+</script>
+</html>
