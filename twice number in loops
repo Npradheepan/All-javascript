@@ -1,0 +1,47 @@
+forlooping
+--------------
+using System;
+
+namespace consoleApp_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0;
+            for (int i = 1; i <= 20; i++) 
+            {
+                if(num<= i)
+                {
+                    Console.WriteLine(num);
+                    num = num + 2;
+                }
+                
+            }
+        }
+        
+    }
+}
+
+while
+-----------
+using System;
+
+namespace consoleApp_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num = 0;
+            int input = 20;
+            while ( num<= input) 
+            {
+                    Console.WriteLine(num);
+                    num = num + 2;
+             }
+        }
+        
+    }
+}
+
