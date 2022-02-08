@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+.grid {
+  display: grid;
+}
+
+body {
+  min-height: 100vh;
+  background: #f2f3f9;
+}
+
+main {
+  place-self: center;
+  overflow: hidden;
+  max-width: 56.25em;
+  box-shadow: -16px 16px 23px currentcolor;
+  background: #fff;
+  color: #b9b7bb;
+  font: 1em/1.25 ubuntu, trebuchet ms, sans-serif;
+}
+
+article {
+  --not-sel: min(1, max(var(--k) - var(--i), var(--i) - var(--k)));
+  --sel: calc(1 - var(--not-sel));
+  --sgn-sel: calc(2*var(--sel) - 1);
+  --pad: min(1.5em, 5vw);
+  grid-area: 1/1;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24em), 1fr));
+  z-index: var(--sel);
+  padding: var(--pad);
+  transition: z-index 0s 1s;
+}
+
+a {
+  font-size: 0.875em;
+  text-decoration: none;
+  color: #000;
+}
+a:focus {
+  outline: none;
+}
+a:hover, a:focus {
+  color: mediumvioletred;
+}
+
+.c--ini {
+  grid-column: 1;
+}
+
+.c--fin {
+  grid-column-end: -1;
+}
+
+.fade {
+  transform: translatey(calc(var(--not-sel)*2rem));
+  opacity: var(--sel);
+  transition: transform 1s ease-out calc(var(--sel)*1s), opacity 1s ease-in calc(var(--sel)*1s);
+}
+
+h3 {
+  font-size: clamp(1.25em, 8vw, 2.5em);
+  font-weight: 900;
+  place-self: end center;
+  padding: 0 0 1em;
+  color: #2c2a2e;
+}
+
+p {
+  padding: 0 5vw;
+  color: #989898;
+  font-size: 0.875em;
+}
+
+.nav {
+  place-self: start center;
+  margin: 0.5em 0 2em;
+  border: solid 1px #e0dee0;
+  padding: 1em min(2.5em, 5vw);
+  border-radius: 4em;
+  font-weight: 700;
+  text-align: center;
+}
+
+section {
+  grid-row-end: span 3;
+  clip-path: inset(calc(-1*var(--pad)) 0);
+}
+
+.slice {
+  --p: calc(var(--j)/var(--m));
+  --s: calc((1 + var(--j))/var(--m)*100%);
+  --mask:
+  	linear-gradient(90deg,
+  		transparent calc(var(--p)*100% - 1px),
+  		red calc(var(--p)*100%) var(--s),
+  		transparent calc(var(--s) + 1px));
+  grid-area: 1/1;
+  height: 50vmin;
+  transform: translatey(calc(var(--not-sel)*(-100% - var(--pad) - 1px)));
+  background: var(--img) 50%/cover;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  transition: transform 1s ease-out calc((var(--sel) + var(--p))*1s);
+}
+
+.det {
+  grid-auto-flow: column;
+  grid-gap: 0.5em;
+  place-content: end start;
+  place-self: end start;
+  position: relative;
+  z-index: 2;
+  padding: 0 1em;
+  height: 0;
+  line-height: 2;
+  white-space: nowrap;
+}
+.det::before {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  height: 2em;
+  width: 100%;
+  background: #fff;
+  content: "";
+}
+.det::after {
+  content: "➔";
+}
+</style>
+<body>
+    
+<body class="grid">
+  <main class="grid" style="--n: 3; --k: 0">
+    <article class="grid" id="a0" style="--i: 0">
+      <h3 class="c--ini fade">Murder Fantasies</h3>
+      <p class="c--ini fade">Spends her days observing you from the shadows, sharpening her claws and weaving elaborate plans to murder you.</p><a class="nav c--ini fade" href="#a1">Next: Silent Killer</a>
+      <section class="grid c--fin" role="img" aria-label="photo of previously described cat" style="--img: url(https://images.unsplash.com/photo-1589201300932-34103827a3ea?w=800); --m: 8">
+        <div class="slice" aria-hidden="true" style="--j: 0"></div>
+        <div class="slice" aria-hidden="true" style="--j: 1"></div>
+        <div class="slice" aria-hidden="true" style="--j: 2"></div>
+        <div class="slice" aria-hidden="true" style="--j: 3"></div>
+        <div class="slice" aria-hidden="true" style="--j: 4"></div>
+        <div class="slice" aria-hidden="true" style="--j: 5"></div>
+        <div class="slice" aria-hidden="true" style="--j: 6"></div>
+        <div class="slice" aria-hidden="true" style="--j: 7"></div>
+      </section><a class="det grid c--fin fade" href="#">Learn more</a>
+    </article>
+    <article class="grid" id="a1" style="--i: 1">
+      <h3 class="c--ini fade">Silent Killer</h3>
+      <p class="c--ini fade">Unseen, unheard, this highly skilled hunter never misses. Birds, mice, no small critter is safe when she is around.</p><a class="nav c--ini fade" href="#a2">Next: Shoe Destroyer</a>
+      <section class="grid c--fin" role="img" aria-label="photo of previously described cat" style="--img: url(https://images.unsplash.com/photo-1635539377590-40d8cf6c2271?w=800); --m: 8">
+        <div class="slice" aria-hidden="true" style="--j: 0"></div>
+        <div class="slice" aria-hidden="true" style="--j: 1"></div>
+        <div class="slice" aria-hidden="true" style="--j: 2"></div>
+        <div class="slice" aria-hidden="true" style="--j: 3"></div>
+        <div class="slice" aria-hidden="true" style="--j: 4"></div>
+        <div class="slice" aria-hidden="true" style="--j: 5"></div>
+        <div class="slice" aria-hidden="true" style="--j: 6"></div>
+        <div class="slice" aria-hidden="true" style="--j: 7"></div>
+      </section><a class="det grid c--fin fade" href="#">Learn more</a>
+    </article>
+    <article class="grid" id="a2" style="--i: 2">
+      <h3 class="c--ini fade">Shoe Destroyer</h3>
+      <p class="c--ini fade">Long past the stage where you cannot leave any footwear out - this litle asshole has become extra sneaky and learned how to open the closet door.</p><a class="nav c--ini fade" href="#a0">Next: Murder Fantasies</a>
+      <section class="grid c--fin" role="img" aria-label="photo of previously described cat" style="--img: url(https://images.unsplash.com/photo-1601275225755-f6a6c1730cb1?w=800); --m: 8">
+        <div class="slice" aria-hidden="true" style="--j: 0"></div>
+        <div class="slice" aria-hidden="true" style="--j: 1"></div>
+        <div class="slice" aria-hidden="true" style="--j: 2"></div>
+        <div class="slice" aria-hidden="true" style="--j: 3"></div>
+        <div class="slice" aria-hidden="true" style="--j: 4"></div>
+        <div class="slice" aria-hidden="true" style="--j: 5"></div>
+        <div class="slice" aria-hidden="true" style="--j: 6"></div>
+        <div class="slice" aria-hidden="true" style="--j: 7"></div>
+      </section><a class="det grid c--fin fade" href="#">Learn more</a>
+    </article>
+  </main>
+</body>
+</body>
+<script>
+    let _MAIN = document.querySelector('main'),
+N = +_MAIN.style.getPropertyValue('--n');
+
+let k = +_MAIN.style.getPropertyValue('--k');
+
+addEventListener('click', e => {
+  let _t = e.target;
+
+  if (_t.classList.contains('nav')) _MAIN.style.setProperty('--k', k = (k + 1) % N);
+});
+</script>
+</html>
